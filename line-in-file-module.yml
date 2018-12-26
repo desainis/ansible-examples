@@ -1,0 +1,13 @@
+######
+# Simple lineinfile 
+# module example
+#
+#
+######
+- 
+  name: Modify sshd_config to permitrootlogon on a linux server
+  hosts: hosts
+  tasks:
+          - lineinfile:
+              path: /etc/ssh/sshd_config
+              line: 'PermitRootLogon yes'
