@@ -1,0 +1,18 @@
+########
+# Install rsync on Idera Machines
+#
+#####
+########
+
+#Simple Ansible Playbook
+- 
+  name: Install screen on a list of servers
+  hosts: hosts
+  tasks:
+      - name: install rsync
+        package:
+          name: rsync
+          state: present
+        register: out
+
+      - debug: msg="{{ list.stdout_lines }}"

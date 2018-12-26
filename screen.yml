@@ -1,0 +1,20 @@
+########
+# Install Screens on Machines
+#
+#####
+########
+
+#Simple Ansible Playbook
+- 
+  name: Install screen on a list of servers
+  hosts: localhost
+  tasks:
+      - name: install screen
+        package:
+          name: screen
+          state: present
+        register: out
+
+      - debug: msg="{{ list.stdout_lines }}"
+
+      
