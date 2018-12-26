@@ -1,0 +1,8 @@
+-
+  name: Start web services in order
+  hosts: hosts
+  tasks:
+    - name: Start web apache services
+      service:
+        name: apache
+        state: started
